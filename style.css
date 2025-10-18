@@ -13,6 +13,10 @@
 
 
   /* Doctor card styling */
+
+  .card{
+    display: contents;
+  }
   .middle-part{
    display: flex;
    grid-template-columns: repeat(3, 1fr);
