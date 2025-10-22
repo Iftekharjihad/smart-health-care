@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Doctors • Smart Health Care</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="logo">Smart Health Care</div>
+      <ul class="nav-center">
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a class="active" href="doctor.html">👨‍⚕️ Doctors</a></li>
+        <li><a href="appointment.html">📅 Appointment</a></li>
+        <li><a href="services.html">🧩 Services</a></li>
+      </ul>
+      <a href="login.html" class="login-btn">🔐 Log In</a>
+    </div>
+  </nav>
+
+  <section class="appointment">
+    <div class="appointment-container">
+      <div class="appointment-info">
+        <h2>Doctor Search Form</h2>
+        <p>Find doctors by speciality, location, or availability time.</p>
+      </div>
+      <form class="appointment-form" onsubmit="return fakeBook(event)">
+        <label for="speciality">Speciality</label>
+        <input id="speciality" type="text" placeholder="Gynecology, Cardiology..." required>
+
+        <label for="location">Location</label>
+        <input id="location" type="text" placeholder="City or Hospital Name" required>
+
+        <label for="time">Available Time</label>
+        <input id="time" type="time" required>
+
+        <label for="phone">Contact</label>
+        <input id="phone" type="tel" placeholder="01XXXXXXXXX" required>
+
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-bottom">
+      <p>© 2025 Smart Health Care Portal. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

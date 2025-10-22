@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard • Smart Health Care</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="logo">Dashboard</div>
+      <ul class="nav-center">
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="#" id="tabLinkPatient" onclick="showTab('patient')">Patient</a></li>
+        <li><a href="#" id="tabLinkDoctor" onclick="showTab('doctor')">Doctor</a></li>
+        <li><a href="#" id="tabLinkAdmin" onclick="showTab('admin')">Admin</a></li>
+      </ul>
+      <a href="index.html" class="login-btn">Log Out</a>
+    </div>
+  </nav>
+
+  <main class="dash">
+    <!-- Patient tab -->
+    <section id="tab-patient" class="tab active">
+      <h2>Patient Panel</h2>
+      <div class="grid two">
+        <div class="card-box">
+          <h3>Your Appointments</h3>
+          <ul class="list">
+            <li>2025-10-22 • 6:00 PM • Dr. Farjana Begum</li>
+          </ul>
+        </div>
+        <div class="card-box">
+          <h3>Upload Report</h3>
+          <input type="file" />
+          <button class="btn mt">Upload</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Doctor tab -->
+    <section id="tab-doctor" class="tab">
+      <h2>Doctor Panel</h2>
+      <div class="grid two">
+        <div class="card-box">
+          <h3>Appointments</h3>
+          <ul class="list">
+            <li>Patient: Ayesha • 2025-10-22 • 6:00 PM</li>
+          </ul>
+        </div>
+        <div class="card-box">
+          <h3>Patient List</h3>
+          <ul class="list">
+            <li>Ayesha • 25 • Female</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Admin tab -->
+    <section id="tab-admin" class="tab">
+      <h2>Admin Panel</h2>
+      <div class="grid two">
+        <div class="card-box">
+          <h3>Verify Doctors</h3>
+          <ul class="list">
+            <li>Dr. New Applicant <button class="btn sm">Verify</button></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
