@@ -218,6 +218,142 @@ a{color:inherit}
       color: #caf0f8;
     }
 
+  /* SERVICES SECTION */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  padding: 80px 60px;
+  margin-top: 50px;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  justify-items: center;
+}
+
+/* Individual Service Block */
+.svc-block {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 18px;
+  padding: 30px 25px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 6px 20px rgba(0, 119, 182, 0.15);
+  backdrop-filter: blur(10px);
+  transition: all 0.35s ease;
+  text-align: center;
+  border-top: 4px solid #00b4d8;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Accent line animation */
+.svc-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #0077b6, #00b4d8, #90e0ef);
+  transition: 0.4s;
+}
+
+.svc-block:hover::before {
+  left: 0;
+}
+
+/* Hover animation */
+.svc-block:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 119, 182, 0.3);
+}
+
+/* Titles */
+.svc-block h2 {
+  font-size: 1.6rem;
+  color: #023e8a;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* Description text */
+.svc-block p {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* File upload input */
+.svc-block input[type="file"] {
+  display: block;
+  margin: 0 auto 15px;
+  border: 1px solid #90e0ef;
+  border-radius: 10px;
+  padding: 10px;
+  width: 90%;
+  background: #f8fdff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.svc-block input[type="file"]:hover {
+  border-color: #00b4d8;
+  box-shadow: 0 0 6px rgba(0, 180, 216, 0.4);
+}
+
+/* Upload button */
+.svc-block button {
+  background: linear-gradient(90deg, #0077b6, #00b4d8);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.svc-block button:hover {
+  background: linear-gradient(90deg, #00b4d8, #0096c7);
+  transform: scale(1.05);
+}
+
+/* Small entrance animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.svc-block {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .services {
+    padding: 50px 25px;
+    gap: 25px;
+  }
+
+  .svc-block {
+    max-width: 90%;
+    padding: 25px 20px;
+  }
+
+  .svc-block h2 {
+    font-size: 1.4rem;
+  }
+}
+
+
 /* Appointment (right side form) */
 .appointment{padding:70px 16px;background:#f1fdf5;display:flex;justify-content:center}
 .appointment-container{max-width:1200px;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top: 40px;}
