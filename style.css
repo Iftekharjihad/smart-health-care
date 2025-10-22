@@ -23,6 +23,121 @@ a{color:inherit}
 .hero-btn{display:inline-block;background:#00b894;color:#fff;text-decoration:none;padding:14px 36px;border-radius:999px;font-weight:600;transition:.2s}
 .hero-btn:hover{background:#7bed9f;color:#023e8a}
 
+/* Signup card */
+.container-signup{
+   font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0077b6, #00b4d8, #90e0ef);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.auth-card {
+  background: #ffffff;
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 400px;
+  max-width: 90%;
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+/* Heading */
+.auth-card h2 {
+  margin-bottom: 25px;
+  color: #023e8a;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Form elements */
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.auth-card label {
+  margin-bottom: 6px;
+  color: #333;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.auth-card input,
+.auth-card select {
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.auth-card input:focus,
+.auth-card select:focus {
+  border-color: #00b4d8;
+  box-shadow: 0 0 8px rgba(0, 180, 216, 0.4);
+}
+
+/* Submit button */
+.auth-card button {
+  background: #0077b6;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.auth-card button:hover {
+  background: #0096c7;
+  transform: scale(1.03);
+}
+
+/* Switch to login */
+.switch-auth {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.switch-auth a {
+  color: #0077b6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.switch-auth a:hover {
+  text-decoration: underline;
+}
+
+/* Subtle fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 30px 25px;
+    width: 90%;
+  }
+}
+
+
  /* Footer styling */
     footer {
       background-color: #065712;
