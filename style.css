@@ -18,17 +18,18 @@
     display: contents;
   }
   .middle-part{
+    margin-top: 70px;
    display: flex;
-   grid-template-columns: repeat(3, 1fr);
-   margin: flex;
-   /* overflow: hidden; */
-   /* position: relative; */
+   flex-wrap: wrap;
+   gap: 50px;
+   padding: 20px;
+   justify-content: center;
 }
 .player-detail{
    background-color: rgb(10, 73, 49);
    box-shadow: 0 0 40px;
    padding: 20px;
-   margin: 100px;
+   margin: 0px;
    border-radius: 2px;
    position: relative;
 }
