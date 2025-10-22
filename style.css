@@ -22,7 +22,15 @@ a{color:inherit}
 .hero p{font-size:1.05rem;margin-bottom:24px;opacity:.95}
 .hero-btn{display:inline-block;background:#00b894;color:#fff;text-decoration:none;padding:14px 36px;border-radius:999px;font-weight:600;transition:.2s}
 .hero-btn:hover{background:#7bed9f;color:#023e8a}
-
+/* login card */
+.auth-body{
+   background: linear-gradient(135deg, #0077b6, #00b4d8, #90e0ef);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
 /* Signup card */
 .container-signup{
    font-family: 'Poppins', sans-serif;
