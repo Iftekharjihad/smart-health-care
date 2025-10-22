@@ -14,7 +14,7 @@ function fakeSignup(e){
 function goDashboard(e){
   e.preventDefault();
   const role = document.getElementById('role').value;
-  window.location.href = 'dashboard.html?role=' + encodeURIComponent(role || 'patient');
+  window.location.href = 'deshboard.html?role=' + encodeURIComponent(role || 'patient');
   return false;
 }
 
