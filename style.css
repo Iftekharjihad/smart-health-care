@@ -1,17 +1,18 @@
 /* Reset & base */
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins',sans-serif;background:#ecf7f1;color:#334}
+body{font-family:'Poppins',sans-serif;background:#85e2af;color:#334}
 a{color:inherit}
 
 /* Navbar */
-.navbar{position:fixed;top:0;left:0;right:0;background:#2e8b57;box-shadow:0 2px 10px rgba(0,0,0,.08);z-index:1000}
+.navbar{position:fixed;top:0;left:0;right:0;background:#0c4424;box-shadow:0 2px 10px rgba(0,0,0,.08);z-index:1000}
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;padding:14px 20px;gap:16px}
 .logo{color:#fff;font-weight:700;font-size:1.2rem;white-space:nowrap}
 .nav-center{list-style:none;display:flex;gap:26px;margin:auto}
-.nav-center a{color:#fff;text-decoration:none;opacity:.95;transition:.2s}
-.nav-center a:hover,.nav-center a.active{color:#c8facc}
-.login-btn{margin-left:auto;background:#00b894;color:#fff;text-decoration:none;padding:10px 18px;border-radius:999px;font-weight:600;transition:.2s}
-.login-btn:hover{background:#7bed9f;color:#023e8a}
+.nav-center a{color:#fdfcfc;text-decoration:none;opacity:.95;transition:.2s}
+.hero-btn{display:inline-block;background:#00b894;color:#fff;text-decoration:none;padding:14px 36px;border-radius:999px;font-weight:600;transition:.2s}
+.nav-center a:hover,.nav-center a.active{color:#afe9b4}
+.login-btn{margin-left:auto;background:#22a037;color:#fff;text-decoration:none;padding:10px 18px;border-radius:999px;font-weight:600;transition:.2s}
+.login-btn:hover{background:#011106;color:#147a64}
 
 /* Hero */
 .hero{height:85vh;display:flex;align-items:center;justify-content:center;text-align:center;background:url('image/background.png') center/cover no-repeat;position:relative;margin-top:58px}
@@ -35,18 +36,17 @@ a{color:inherit}
 .appointment-form button{margin-top:6px;padding:12px 14px;border:none;border-radius:10px;background:#2e8b57;color:#fff;font-weight:700;cursor:pointer}
 .appointment-form button:hover{background:#7bed9f;color:#023e8a}
 
-/* Doctors */
 /* Doctor card styling */
 .card{ display: contents; }
 .middle-part{ display: flex; grid-template-columns: repeat(3, 1fr); margin: flex; /* overflow: hidden; */ /* position: relative; */ }
-.player-detail{ background-color: rgb(10, 73, 49); box-shadow: 0 0 40px; padding: 20px; margin: 100px; border-radius: 2px; position: relative; }
-.player-details{ display: none; position: absolute; width: 355px; height: 270px; border-radius: 5px; top: 0; }
-.player-detail:hover .player-details{ display: block; background-color: rgba(224, 213, 193, 0.753); }
+.doctor-detail{ background-color: rgb(10, 73, 49); box-shadow: 0 0 40px; padding: 20px; margin: 100px; border-radius: 2px; position: relative; }
+.doctor-details{ display: none; position: absolute; width: 355px; height: 270px; border-radius: 5px; top: 0; }
+.doctor-detail:hover .doctor-details{ display: block; background-color: rgba(224, 213, 193, 0.753); }
 .middle-part:hover .img{ transform: scale(1.1) ; transition: transform 2s ease-in-out; }
 .img img{ width: 355px; height: 271px; border-radius: 20px; }
 
 /* Footer */
-footer{background:#2e8b57;color:#fff;padding:40px 16px 18px}
+footer{background:#114125;color:#fff;padding:40px 16px 18px}
 .footer-container{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .footer-col h3{margin-bottom:10px}
 .footer-col ul{list-style:none}
