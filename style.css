@@ -1,6 +1,6 @@
 /* Reset & base */
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins',sans-serif;background:#85e2af;color:#334}
+body{font-family:'Poppins',sans-serif;background:#eef3f0;color:#334}
 a{color:inherit}
 
 /* Navbar */
@@ -20,7 +20,7 @@ a{color:inherit}
 .hero-content{position:relative;color:#fff;padding:0 14px}
 .hero h1{font-size:2.4rem;margin-bottom:12px}
 .hero p{font-size:1.05rem;margin-bottom:24px;opacity:.95}
-.hero-btn{display:inline-block;background:#00b894;color:#fff;text-decoration:none;padding:14px 36px;border-radius:999px;font-weight:600;transition:.2s}
+.hero-btn{display:inline-block;background:#22a037;color:#fff;text-decoration:none;padding:14px 36px;border-radius:999px;font-weight:600;transition:.2s}
 .hero-btn:hover{background:#7bed9f;color:#023e8a}
 /* login card */
 .auth-body{
@@ -211,7 +211,7 @@ a{color:inherit}
 
     .footer-bottom {
       text-align: center;
-      border-top: 1px solid #0077b6;
+      border-top: 1px solid #000000;
       padding-top: 15px;
       margin-top: 40px;
       font-size: 0.9rem;
@@ -264,13 +264,13 @@ a{color:inherit}
 /* Hover animation */
 .svc-block:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 119, 182, 0.3);
+  box-shadow: 0 10px 25px rgba(72, 143, 181, 0.3);
 }
 
 /* Titles */
 .svc-block h2 {
   font-size: 1.6rem;
-  color: #023e8a;
+  color: #1b3a64;
   margin-bottom: 12px;
   font-weight: 600;
 }
@@ -368,10 +368,10 @@ a{color:inherit}
 .appointment-form button:hover{background:#7bed9f;color:#023e8a}
 
 /* Doctor card styling */
-.card{ display: contents; }
-.middle-part{ display: flex; grid-template-columns: repeat(3, 1fr); margin: flex; /* overflow: hidden; */ /* position: relative; */ }
-.doctor-detail{ background-color: rgb(10, 73, 49); box-shadow: 0 0 40px; padding: 20px; margin: 100px; border-radius: 2px; position: relative; }
-.doctor-details{ display: none; position: absolute; width: 355px; height: 270px; border-radius: 5px; top: 0; }
+.card{ display: contents;}
+.middle-part{ display: flex; grid-template-columns: repeat(3, 1fr); margin: grid; /* overflow: hidden; */ /* position: relative; */ }
+.doctor-detail{ background-color: rgb(10, 73, 49); box-shadow: 0 0 40px; padding: 20px; margin: 30px; border-radius: 55px; position: relative; }
+.doctor-details{ display: none; position: absolute; width: 355px; height: 280px; border-radius: 30px; top: 0; }
 .doctor-detail:hover .doctor-details{ display: block; background-color: rgba(224, 213, 193, 0.753); }
 .middle-part:hover .img{ transform: scale(1.1) ; transition: transform 2s ease-in-out; }
 .img img{ width: 355px; height: 271px; border-radius: 20px; }
