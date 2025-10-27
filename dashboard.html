@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Dashboard • Smart Health Care</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-inner">
+            <div class="logo">Dashboard</div>
+            <ul class="nav-center">
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="#" id="tabLinkPatient" onclick="showTab('patient')" class="active">Patient</a></li>
+                <li><a href="#" id="tabLinkDoctor" onclick="showTab('doctor')">Doctor</a></li>
+                <li><a href="#" id="tabLinkAdmin" onclick="showTab('admin')">Admin</a></li>
+            </ul>
+            <a href="index.html" class="login-btn">Log Out</a>
+        </div>
+    </nav>
+
+    <main class="dash">
+        <section id="tab-patient" class="tab active">
+            <h2>Patient Panel</h2>
+            <div class="grid two">
+                <div class="card-box">
+                    <h3>Your Appointments</h3>
+                    <ul class="list">
+                        <li>2025-10-22 • 6:00 PM • Dr. Farjana Begum</li>
+                    </ul>
+                </div>
+                <div class="card-box">
+                    <h3>Upload Report</h3>
+                    <input type="file" />
+                    <button class="btn mt">Upload</button>
+                </div>
+                <div class="card-box">
+                    <h3>Previous Prescriptions</h3>
+                    <ul class="list">
+                        <li>Dr. Saif Uddoula • 2025-05-10 <button class="btn sm">View</button></li>
+                        <li>Dr. Feroza Akhter • 2024-11-15 <button class="btn sm">View</button></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab-doctor" class="tab">
+            <h2>Doctor Panel</h2>
+            <div class="grid two">
+                <div class="card-box">
+                    <h3>Upcoming Appointments</h3>
+                    <ul class="list">
+                        <li>Patient: Ayesha • 2025-10-22 • 6:00 PM <button class="btn sm">Start Consult</button></li>
+                    </ul>
+                </div>
+                <div class="card-box">
+                    <h3>Patient List</h3>
+                    <ul class="list">
+                        <li>Ayesha • 25 • Female</li>
+                        <li>Rashed • 40 • Male</li>
+                    </ul>
+                </div>
+                <div class="card-box">
+                    <h3>Write Prescription</h3>
+                    <button class="btn mt">New Prescription</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab-admin" class="tab">
+            <h2>Admin Panel</h2>
+            <div class="grid two">
+                <div class="card-box">
+                    <h3>Verify Doctors</h3>
+                    <ul class="list">
+                        <li>Dr. New Applicant <button class="btn sm">Verify</button></li>
+                    </ul>
+                </div>
+                <div class="card-box">
+                    <h3>Manage Users</h3>
+                    <ul class="list">
+                        <li>Total Patients: 50</li>
+                        <li>Total Doctors: 12</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>Smart Health Care</h3>
+                <p>Providing modern digital solutions for better health care —
+                    book appointments, consult doctors, and access your reports online.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">🏠 Home</a></li>
+                    <li><a href="doctor.html">👨‍⚕️ Doctors</a></li>
+                    <li><a href="appointment.html">📅 Appointments</a></li>
+                    <li><a href="services.html">🧩 Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><strong>Email:</strong> support@smarthealthcare.com</p>
+                <p><strong>Phone:</strong> +880 1610-177059</p>
+                <p><strong>Address:</strong> 123 Health Street, Chattagram, Bangladesh</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Smart Health Care Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

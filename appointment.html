@@ -1,97 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Book Appointment • Smart Health Care</title>
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Book Appointment • Smart Health Care</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="nav-inner">
-      <div class="logo">Smart Health Care Portal</div>
-      <ul class="nav-center">
-        <li><a href="index.html">🏠 Home</a></li>
-        <li><a href="doctor.html">👨‍⚕️ Doctors</a></li>
-        <li><a class="active" href="appointment.html">📅 Appointment</a></li>
-        <li><a href="services.html">🧩 Services</a></li>
-      </ul>
-      <a href="login.html" class="login-btn">🔐 Log In</a>
-    </div>
-  </nav>
-
-  <section class="appointment">
-    <div class="appointment-container">
-      <div class="appointment-info">
-        <h2>Book an Appointment</h2>
-        <p>Choose speciality and doctor, then pick your preferred date and time.</p>
-        <ul class="ticks">
-          <li>Verified Doctors</li>
-          <li>Fast Booking</li>
-          <li>Secure & Private</li>
-        </ul>
-      </div>
-      <form class="appointment-form" onsubmit="return fakeBook(event)">
-        <label for="speciality">Speciality</label>
-        <input id="speciality" type="text" placeholder="Gynecology, Cardiology..." required>
-
-        <label for="doctor">Doctor</label>
-        <input id="doctor" type="text" placeholder="Type doctor name..." required>
-
-        <label for="pname">Patient Name</label>
-        <input id="pname" type="text" placeholder="Your full name" required>
-
-        <label for="phone">Phone Number</label>
-        <input id="phone" type="tel" placeholder="01XXXXXXXXX" required>
-
-        <div class="row">
-          <div>
-            <label for="date">Date</label>
-            <input id="date" type="date" required>
-          </div>
-          <div>
-            <label for="time">Time</label>
-            <input id="time" type="time" required>
-          </div>
+    <nav class="navbar">
+        <div class="nav-inner">
+            <div class="logo">Smart Health Care Portal</div>
+            <ul class="nav-center">
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="doctor.html">👨‍⚕️ Doctors</a></li>
+                <li><a class="active" href="appointment.html">📅 Appointment</a></li>
+                <li><a href="services.html">🧩 Services</a></li>
+            </ul>
+            <a href="login.html" class="login-btn">🔐 Log In</a>
         </div>
+    </nav>
 
-        <button type="submit">Book Appointment</button>
-      </form>
-    </div>
-  </section>
+    <section class="appointment">
+        <div class="appointment-container">
+            <div class="appointment-info">
+                <h2>Book Your Appointment</h2>
+                <p>Please fill out the form to book an appointment with a specialist.</p>
+                <ul class="ticks">
+                    <li>Verified Doctors</li>
+                    <li>Fast Booking</li>
+                    <li>Secure & Private</li>
+                </ul>
+            </div>
+            <form class="appointment-form" onsubmit="return fakeBook(event)">
+                <label for="select-speciality">1) Select Speciality</label>
+                <select id="select-speciality" required>
+                    <option value="">-- Choose Speciality --</option>
+                    <option value="cardiology">Cardiology</option>
+                    <option value="gynecology">Gynecology & Obstetrics</option>
+                    <option value="pediatrics">Pediatrics</option>
+                    <option value="gastroenterology">Gastroenterology</option>
+                </select>
 
-   <!-- Footer Section -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-about">
-        <h3>Smart Health Care</h3>
-        <p>Providing modern digital solutions for better health care — 
-           book appointments, consult doctors, and access your reports online.</p>
-      </div>
-,
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="doctor.html">Doctors</a></li>
-          <li><a href="appointment.html">Appointments</a></li>
-            <li><a href="services.html">Services</a></li>
+                <label for="doctor-name">2) Doctor Name</label>
+                <input id="doctor-name" type="text" placeholder="Dr. Farjana Begum" required>
 
-        </ul>
-      </div>
+                <label for="patient-name">3) Patient Name</label>
+                <input id="patient-name" type="text" placeholder="Your Full Name" required>
 
-      <div class="footer-contact">
-        <h4>Contact Us</h4>
-        <p><strong>Email:</strong> support@smarthealthcare.com</p>
-        <p><strong>Phone:</strong> +880 1610-177059</p>
-        <p><strong>Address:</strong> 123 Health Street, Chattagram, Bangladesh</p>
-      </div>
-    </div>
+                <div class="row">
+                    <div>
+                        <label for="patient-age">Age</label>
+                        <input id="patient-age" type="number" min="1" max="120" placeholder="Age" required>
+                    </div>
+                    <div>
+                        <label for="weight">Weight (kg)</label>
+                        <input id="weight" type="number" min="1" max="300" placeholder="Weight" required>
+                    </div>
+                </div>
 
-    <div class="footer-bottom">
-      <p>© 2025 Smart Health Care Portal. All rights reserved.</p>
-    </div>
-  </footer>
-  <script src="script.js"></script>
+                <label for="gender">4) Gender</label>
+                <select id="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="phone">5) Phone No.</label>
+                <input id="phone" type="tel" placeholder="01XXXXXXXXX" required>
+
+                <div class="row">
+                    <div>
+                        <label for="date">6) Date</label>
+                        <input id="date" type="date" required>
+                    </div>
+                    <div>
+                        <label for="time">Time</label>
+                        <input id="time" type="time" required>
+                    </div>
+                </div>
+
+                <button type="submit">Book Appointment</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>Smart Health Care</h3>
+                <p>Providing modern digital solutions for better health care —
+                    book appointments, consult doctors, and access your reports online.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">🏠 Home</a></li>
+                    <li><a href="doctor.html">👨‍⚕️ Doctors</a></li>
+                    <li><a href="appointment.html">📅 Appointments</a></li>
+                    <li><a href="services.html">🧩 Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><strong>Email:</strong> support@smarthealthcare.com</p>
+                <p><strong>Phone:</strong> +880 1610-177059</p>
+                <p><strong>Address:</strong> 123 Health Street, Chattagram, Bangladesh</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Smart Health Care Portal. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

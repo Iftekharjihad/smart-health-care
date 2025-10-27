@@ -1,42 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sign Up | Smart Health Care</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sign Up | Smart Health Care</title>
 
-  <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <div class="container-signup">
-    <div class="auth-card">
-    <h2>Create Your Account</h2>
-    <form onsubmit="return fakeSignup(event)">
-      <label for="role">Register As</label>
-      <select id="role" required>
-        <option value="">-- Select Role --</option>
-        <option value="patient">Patient</option>
-        <option value="doctor">Doctor</option>
-        <option value="admin">Admin</option>
-      </select>
+    <div class="container-signup">
+        <div class="auth-card">
+            <h2>Create Your Account</h2>
+            <form onsubmit="return fakeSignup(event)">
+                <label for="role">Register As</label>
+                <select id="role" required>
+                    <option value="">-- Select Role --</option>
+                    <option value="patient">Patient</option>
+                    <option value="doctor">Doctor</option>
+                    <option value="admin">Admin</option>
+                </select>
 
-      <label for="name">Full Name</label>
-      <input id="name" type="text" placeholder="Enter your full name" required>
+                <label for="name">Full Name</label>
+                <input id="name" type="text" placeholder="Enter your full name" required>
 
-      <label for="email">Email</label>
-      <input id="email" type="email" placeholder="Enter your email" required>
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="Enter your email" required>
 
-      <label for="password">Password</label>
-      <input id="password" type="password" placeholder="Create password" required>
+                <label for="password">Password</label>
+                <input id="password" type="password" placeholder="Create password" required>
 
-      <label for="confirm">Confirm Password</label>
-      <input id="confirm" type="password" placeholder="Confirm password" required>
+                <label for="confirm">Confirm Password</label>
+                <input id="confirm" type="password" placeholder="Confirm password" required>
 
-      <button type="submit">Sign Up</button>
-    </form>
-    <p class="switch-auth">Already have an account? <a href="login.html">Log in</a></p>
-  </div>
-  </div>
-  <script src="script.js"></script>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p class="switch-auth">Already have an account? <a href="login.html">Log in</a></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
