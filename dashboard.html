@@ -39,7 +39,6 @@
                     <h3>Previous Prescriptions</h3>
                     <ul class="list">
                         <li>Dr. Saif Uddoula • 2025-05-10 <button class="btn sm">View</button></li>
-                        <li>Dr. Feroza Akhter • 2024-11-15 <button class="btn sm">View</button></li>
                     </ul>
                 </div>
             </div>
@@ -49,21 +48,24 @@
             <h2>Doctor Panel</h2>
             <div class="grid two">
                 <div class="card-box">
+                    <h3>License & Verification Status</h3>
+                    <p style="font-size: 0.9em; margin-bottom: 8px;">Status: **Pending Admin Feedback**</p>
+                    <input type="file" accept=".pdf" id="doctorLicense" />
+                    <button class="btn mt" onclick="alert('Request sent to Admin for verification (Demo).')">Send Verification Request</button>
+                    <button class="btn sm mt" onclick="alert('Admin Feedback: Please correct the document and resubmit (Demo).')" style="background: #e74c3c;">View Admin Feedback</button>
+                </div>
+
+                <div class="card-box">
+                    <h3>Fill Doctor Profile Form</h3>
+                    <p style="font-size: 0.9em; margin-bottom: 12px;">Complete this form after successful license verification to start seeing patients.</p>
+                    <button class="btn mt" onclick="alert('Opening Doctor Profile Form (Demo).')">Fill Form</button>
+                </div>
+
+                <div class="card-box">
                     <h3>Upcoming Appointments</h3>
                     <ul class="list">
                         <li>Patient: Ayesha • 2025-10-22 • 6:00 PM <button class="btn sm">Start Consult</button></li>
                     </ul>
-                </div>
-                <div class="card-box">
-                    <h3>Patient List</h3>
-                    <ul class="list">
-                        <li>Ayesha • 25 • Female</li>
-                        <li>Rashed • 40 • Male</li>
-                    </ul>
-                </div>
-                <div class="card-box">
-                    <h3>Write Prescription</h3>
-                    <button class="btn mt">New Prescription</button>
                 </div>
             </div>
         </section>
@@ -72,9 +74,10 @@
             <h2>Admin Panel</h2>
             <div class="grid two">
                 <div class="card-box">
-                    <h3>Verify Doctors</h3>
+                    <h3>Verify Doctors (Pending)</h3>
                     <ul class="list">
-                        <li>Dr. New Applicant <button class="btn sm">Verify</button></li>
+                        <li>Dr. New Applicant <button class="btn sm" onclick="alert('Marked Dr. Applicant as Verified (Demo).')">Verify</button></li>
+                        <li>Dr. S. K. Roy <button class="btn sm" onclick="alert('Sent feedback to Dr. Roy (Demo).')" style="background: #f39c12;">Send Feedback</button></li>
                     </ul>
                 </div>
                 <div class="card-box">
