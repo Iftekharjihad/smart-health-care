@@ -155,72 +155,122 @@ a{color:inherit;text-decoration:none}
 .doctor-details h2{ font-size: 1.5rem; margin-bottom: 10px;}
 .doctor-details p{ font-size: 0.95rem; line-height: 1.5;}
 
-/* SERVICES SECTION */
-.services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+/* SERVICES PAGE NEW LAYOUT */
+.services-container {
+    max-width: 1200px;
+    margin: 58px auto 50px auto; /* Adjust margin for fixed navbar */
+    padding: 20px;
+    display: flex;
     gap: 40px;
-    padding: 80px 60px;
-    margin-top: 58px; /* Adjusted for fixed navbar */
-    background: linear-gradient(135deg, #e0f7fa, #ffffff);
-    justify-items: center;
 }
-.svc-block {
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: 18px;
-    padding: 30px 25px;
-    width: 100%;
-    max-width: 420px;
-    box-shadow: 0 6px 20px rgba(0, 119, 182, 0.15);
-    transition: all 0.35s ease;
-    text-align: center;
-    border-top: 4px solid #00b4d8;
-    position: relative;
-    overflow: hidden;
+
+.services-half {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
-.svc-block:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(72, 143, 181, 0.3);
+
+.template-section {
+    background: #ffffff;
+    border-left: 5px solid #0077b6;
 }
-.svc-block h2 {
-    font-size: 1.6rem;
-    color: #1b3a64;
-    margin-bottom: 12px;
-    font-weight: 600;
+
+.source-section {
+    background: #e0f7fa;
+    border-left: 5px solid #22a037;
 }
-.svc-block p {
-    color: #333;
+
+.services-half h2 {
+    font-size: 1.8rem;
+    color: #0c4424;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.services-half p {
     font-size: 0.95rem;
-    line-height: 1.6;
     margin-bottom: 20px;
+    color: #555;
 }
-.svc-block input[type="file"] {
-    display: block;
-    margin: 0 auto 15px;
-    border: 1px solid #90e0ef;
+
+.svc-block {
+    padding: 15px;
     border-radius: 10px;
-    padding: 10px;
-    width: 90%;
-    background: #f8fdff;
+    margin-bottom: 15px;
+}
+
+/* Template Cards (Left) */
+.template-card {
+    background: #f7f9fb;
+    border: 1px solid #e0e6ed;
+}
+
+.template-card h3 {
+    color: #0077b6;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.template-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.template-list li {
+    background: #ffffff;
+    padding: 8px 10px;
+    border-radius: 6px;
+    margin-bottom: 5px;
     font-size: 0.9rem;
-    cursor: pointer;
-    transition: border-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #eee;
 }
-.svc-block button {
-    background: linear-gradient(90deg, #0077b6, #00b4d8);
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
+
+.template-btn {
+    width: 100%;
+    background: #0077b6;
+    margin-top: 10px;
+    padding: 10px;
 }
-.svc-block button:hover {
-    background: linear-gradient(90deg, #00b4d8, #0096c7);
-    transform: scale(1.05);
+.template-btn:hover {
+    background: #005f93;
 }
+
+/* Source Cards (Right) */
+.source-card {
+    background: #ffffff;
+    border: 1px solid #c8e6c9;
+}
+
+.source-card h3 {
+    color: #22a037;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.source-btn {
+    width: 100%;
+    background: #22a037;
+    padding: 10px;
+    margin-top: 10px;
+}
+.source-btn:hover {
+    background: #147a64;
+}
+
+.emergency-btn {
+    background: #e74c3c !important;
+}
+.emergency-btn:hover {
+    background: #c0392b !important;
+}
+
 
 /* ===== Dashboard Section Only ===== */
 main.dash {
@@ -307,10 +357,25 @@ main.dash {
 .btn:hover {
     background: #1e40af;
 }
+
+/* Custom Button Styles for Dashboard */
 .btn.sm {
     padding: 0.3rem 0.7rem;
     font-size: 0.85rem;
 }
+.btn.sm[style*="background: #e74c3c"] { /* Feedback view */
+    background: #e74c3c !important; 
+}
+.btn.sm[style*="background: #e74c3c"]:hover {
+    background: #c0392b !important; 
+}
+.btn.sm[style*="background: #f39c12"] { /* Send Feedback */
+    background: #f39c12 !important; 
+}
+.btn.sm[style*="background: #f39c12"]:hover {
+    background: #c9790c !important; 
+}
+
 .mt {
     margin-top: 0.7rem;
 }
@@ -324,6 +389,7 @@ input[type="file"] {
     cursor: pointer;
     transition: 0.3s;
 }
+
 
 /* Footer styling */
 footer {
@@ -391,12 +457,19 @@ footer {
 @media (max-width: 1024px){
     .appointment-container{grid-template-columns:1fr}
 }
+@media (max-width: 900px) {
+    .services-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .services-half {
+        padding: 15px;
+    }
+}
 @media (max-width: 768px){
     .nav-center{display:none} /* Hide nav links on smaller screens */
     .hero{height:75vh;margin-top:58px}
     .footer-container{flex-direction: column; gap: 25px; padding: 0 20px;}
-    .services {padding: 50px 25px; gap: 25px;}
-    .svc-block {max-width: 90%; padding: 25px 20px;}
     .grid.two{grid-template-columns:1fr}
 }
 @media (max-width: 480px) {
