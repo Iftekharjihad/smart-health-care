@@ -1,71 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services • Smart Health Care</title>
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Services • Smart Health Care</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="nav-inner">
-      <div class="logo">Smart Health Care Portal</div>
-      <ul class="nav-center">
-        <li><a href="index.html">🏠 Home</a></li>
-        <li><a href="doctor.html">👨‍⚕️ Doctors</a></li>
-        <li><a href="appointment.html">📅 Appointment</a></li>
-        <li><a class="active" href="services.html">🧩 Services</a></li>
-      </ul>
-      <a href="login.html" class="login-btn">🔐 Log In</a>
-    </div>
-  </nav>
+    <nav class="navbar">
+        <div class="nav-inner">
+            <div class="logo">Smart Health Care Portal</div>
+            <ul class="nav-center">
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="doctor.html">👨‍⚕️ Doctors</a></li>
+                <li><a href="appointment.html">📅 Appointment</a></li>
+                <li><a class="active" href="services.html">🧩 Services</a></li>
+            </ul>
+            <a href="login.html" class="login-btn">🔐 Log In</a>
+        </div>
+    </nav>
 
-  <main class="services">
+    <section class="services-container">
+        <div class="services-half template-section">
+            <h2>🏥 Patient Health Template (Data Storage)</h2>
+            <p>View and manage all your vital health records in one secure location. This template stores your medical history for quick access by you and your authorized doctors.</p>
+            
+            <div class="svc-block template-card">
+                <h3>📅 Appointment Data</h3>
+                <p>All records of past and upcoming consultations.</p>
+                <ul class="template-list">
+                    <li>Dr. Farjana Begum - 2025-10-22 <button class="btn sm">View Details</button></li>
+                    <li>Dr. Saif Uddoula - 2025-05-10 <button class="btn sm">View Details</button></li>
+                </ul>
+                <button class="btn template-btn" onclick="alert('Redirecting to full Appointment History (Demo)!')">Go to History</button>
+            </div>
 
-    <section class="svc-block">
-      <h2>Learning Platform</h2>
-      <p>Access curated health articles, videos, and courses to stay informed.</p>
+            <div class="svc-block template-card">
+                <h3>📝 Prescription Records</h3>
+                <p>Digital copies of all doctor-issued prescriptions.</p>
+                <ul class="template-list">
+                    <li>Prescription from 2025-10-22 <button class="btn sm">Download PDF</button></li>
+                    <li>Prescription from 2025-05-10 <button class="btn sm">Download PDF</button></li>
+                </ul>
+                <button class="btn template-btn" onclick="alert('Redirecting to full Prescription Archive (Demo)!')">View All Prescriptions</button>
+            </div>
+
+            <div class="svc-block template-card">
+                <h3>📊 Patient Reports & Scans</h3>
+                <p>Upload and view your lab test results and imaging reports.</p>
+                <ul class="template-list">
+                    <li>Blood Test Report - 2025-10-15 <button class="btn sm">View Report</button></li>
+                    <li>X-Ray Scan - 2025-04-01 <button class="btn sm">View Report</button></li>
+                </ul>
+                <button class="btn template-btn" onclick="alert('Redirecting to Report Upload/Download (Demo)!')">Upload New Report</button>
+            </div>
+        </div>
+
+        <div class="services-half source-section">
+            <h2>🌐 External Health Sources</h2>
+            <p>Quick access to essential health services and emergency information in Bangladesh.</p>
+
+            <div class="svc-block source-card">
+                <h3>🩸 Blood Donation Links</h3>
+                <p>Find nearby blood banks, donation camps, and emergency blood donors.</p>
+                <button class="btn source-btn" onclick="alert('Opening Blood Donation Resource Link (Demo)!')">Find Donors / Banks</button>
+            </div>
+
+            <div class="svc-block source-card">
+                <h3>💉 Vaccination/Tika Program Info</h3>
+                <p>Official links for current Polio, COVID-19, or other national vaccination schedules and centers.</p>
+                <button class="btn source-btn" onclick="alert('Opening Official Vaccination Program Website (Demo)!')">Get Tika Info</button>
+            </div>
+
+            <div class="svc-block source-card">
+                <h3>🚑 Emergency Ambulance Services</h3>
+                <p>Quick access to national and local ambulance emergency contacts.</p>
+                <button class="btn source-btn emergency-btn" onclick="alert('Emergency Call: 199 or View Local Contacts (Demo)!')">Call Ambulance</button>
+            </div>
+            
+            <div class="svc-block source-card">
+                <h3>Doctor Service Portal</h3>
+                <p>Doctor Application Form Download and License Upload Portal.</p>
+                <button class="btn source-btn" onclick="window.location.href='dashboard.html?role=doctor'">Go to Doctor Panel</button>
+            </div>
+        </div>
     </section>
-    <section class="svc-block">
-      <h2>Patient Report</h2>
-      <p>Upload, manage, and securely share your medical reports.</p>
-      <input type="file"/>
-      <button>Upload</button>
-    </section>
-  </main>
 
-   <!-- Footer Section -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-about">
-        <h3>Smart Health Care</h3>
-        <p>Providing modern digital solutions for better health care — 
-           book appointments, consult doctors, and access your reports online.</p>
-      </div>
-,
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="doctor.html">Doctors</a></li>
-          <li><a href="appointment.html">Appointments</a></li>
-            <li><a href="services.html">Services</a></li>
-
-        </ul>
-      </div>
-
-      <div class="footer-contact">
-        <h4>Contact Us</h4>
-        <p><strong>Email:</strong> support@smarthealthcare.com</p>
-        <p><strong>Phone:</strong> +880 1610-177059</p>
-        <p><strong>Address:</strong> 123 Health Street, Chattagram, Bangladesh</p>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>© 2025 Smart Health Care Portal. All rights reserved.</p>
-    </div>
-  </footer>
-  <script src="script.js"></script>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>Smart Health Care</h3>
+                <p>Providing modern digital solutions for better health care —
+                    book appointments, consult doctors, and access your reports online.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">🏠 Home</a></li>
+                    <li><a href="doctor.html">👨‍⚕️ Doctors</a></li>
+                    <li><a href="appointment.html">📅 Appointments</a></li>
+                    <li><a href="services.html">🧩 Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><strong>Email:</strong> support@smarthealthcare.com</p>
+                <p><strong>Phone:</strong> +880 1610-177059</p>
+                <p><strong>Address:</strong> 123 Health Street, Chattagram, Bangladesh</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Smart Health Care Portal. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
