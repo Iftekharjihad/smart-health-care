@@ -1,14 +1,5 @@
-function fakeBook(e){
-    e.preventDefault();
-    alert('Appointment request submitted! (demo)');
-    return false;
-}
 
-function fakeSearch(e){
-    e.preventDefault();
-    alert('Doctor search initiated! (demo)');
-    return false;
-}
+
 
 function fakeSignup(e){
     e.preventDefault();
@@ -56,3 +47,111 @@ function showTab(tab){
         }
     }
 })();
+
+
+// Form validation function
+
+
+// Fake booking function (for demo without PHP)
+function fakeBook(event) {
+    event.preventDefault();
+    alert('Appointment submitted! In live system, this would save to database.');
+    return false;
+}
+
+// Fake search function
+function fakeSearch(event) {
+    // Remove the alert since we're now using real PHP search
+    // The form will submit to search_doctors.php
+    return true; // Allow form submission
+}
+
+// Set minimum date to today
+// document.addEventListener('DOMContentLoaded', function() {
+//     const dateField = document.getElementById('appointment_date');
+//     if (dateField) {
+//         const today = new Date().toISOString().split('T')[0];
+//         dateField.setAttribute('min', today);
+        
+//         // Also set default to today
+//         dateField.value = today;
+//     }
+    
+//     // Form validation
+//     const form = document.querySelector('.appointment-form');
+//     if (form) {
+//         form.addEventListener('submit', function(event) {
+//             // Get form values
+//             const phone = document.getElementById('phone_number').value;
+//             const date = document.getElementById('appointment_date').value;
+//             const age = document.getElementById('patient_age').value;
+//             const gender = document.querySelector('input[name="patient_gender"]:checked');
+            
+//             // Check if form is valid
+//             if (!form.checkValidity()) {
+//                 alert('Please fill all required fields correctly.');
+//                 return;
+//             }
+            
+//             // Additional custom validation
+//             if (!gender) {
+//                 alert('Please select gender');
+//                 event.preventDefault();
+//                 return false;
+//             }
+            
+//             // Phone validation
+//             const phoneRegex = /^\+?8801[3-9]\d{8}$/;
+//             if (!phoneRegex.test(phone)) {
+//                 alert('Please enter a valid Bangladeshi phone number (e.g., +8801XXXXXXXXX)');
+//                 event.preventDefault();
+//                 return false;
+//             }
+            
+//             // Date validation
+//             const today = new Date().toISOString().split('T')[0];
+//             if (date < today) {
+//                 alert('Appointment date cannot be in the past!');
+//                 event.preventDefault();
+//                 return false;
+//             }
+            
+//             // Age validation
+//             if (age < 1 || age > 120) {
+//                 alert('Please enter a valid age (1-120 years)');
+//                 event.preventDefault();
+//                 return false;
+//             }
+            
+//             return true;
+//         });
+//     }
+// });
+// In your script.js file, add this function
+function prefillAppointmentForm() {
+    // Get URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const doctor = urlParams.get('doctor');
+    const specialty = urlParams.get('specialty');
+    
+    if (doctor) {
+        document.getElementById('doctor_name').value = doctor;
+    }
+    
+    if (specialty) {
+        const select = document.getElementById('speciality');
+        for (let option of select.options) {
+            if (option.text.includes(specialty) || option.value.includes(specialty)) {
+                option.selected = true;
+                break;
+            }
+        }
+    }
+}
+
+// Call this when appointment page loads
+document.addEventListener('DOMContentLoaded', function() {
+    prefillAppointmentForm();
+    
+    // ... rest of your existing code
+});

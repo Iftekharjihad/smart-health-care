@@ -34,66 +34,73 @@
                 </ul>
             </div>
 
-            <form class="appointment-form" onsubmit="return fakeBook(event)">
-                <h3>Appointment Request Form</h3>
+           <form class="appointment-form" action="insert_appointment.php" method="POST">
+    <h3>Appointment Request Form</h3>
 
-                <label for="speciality">Select Speciality *</label>
-                <select id="speciality" required>
-                    <option value="">Select</option>
-                    <option value="Cardiology">Cardiology</option>
-                    <option value="Gynecology">Gynecology & Obstetrics</option>
-                    <option value="Pediatrics">Pediatrics</option>
-                    <option value="Medicine">Medicine & Gastroenterology</option>
-                </select>
+    <label for="speciality">Select Speciality *</label>
+    <select id="speciality" name="speciality" required>
+        <option value="">Select</option>
+        <option value="Cardiology">Cardiology</option>
+        <option value="Gynecology">Gynecology & Obstetrics</option>
+        <option value="Pediatrics">Pediatrics</option>
+        <option value="Medicine">Medicine & Gastroenterology</option>
+    </select>
 
-                <label for="doctorName">Doctor Name *</label>
-                <input id="doctorName" type="text" placeholder="Enter Doctor's Full Name" required>
+    <label for="doctor_name">Doctor Name *</label>
+    <input id="doctor_name" name="doctor_name" type="text" placeholder="Enter Doctor's Full Name" required>
 
-                <label for="patientName">Patient Name *</label>
-                <input id="patientName" type="text" placeholder="Enter Patient's Full Name" required>
+    <label for="patient_name">Patient Name *</label>
+    <input id="patient_name" name="patient_name" type="text" placeholder="Enter Patient's Full Name" required>
 
-                <div class="row">
-                    <div>
-                        <label for="age">Age *</label>
-                        <input id="age" type="number" placeholder="Years" required min="1">
-                    </div>
-                    <div>
-                        <label for="weight">Weight</label>
-                        <input id="weight" type="number" placeholder="kg (optional)">
-                    </div>
-                </div>
+    <div class="row">
+        <div>
+            <label for="patient_age">Age *</label>
+            <input id="patient_age" name="patient_age" type="number" placeholder="Years" required min="1" max="120">
+        </div>
+        <div>
+            <label for="patient_weight">Weight</label>
+            <input id="patient_weight" name="patient_weight" type="number" placeholder="kg (optional)" min="1" max="300">
+        </div>
+    </div>
 
-                <label for="gender">Gender *</label>
-                <div class="row" style="grid-template-columns: 1fr 1fr; gap: 20px;">
-                    <div>
-                        <input type="radio" id="genderMale" name="gender" value="Male" required>
-                        <label for="genderMale" style="font-weight: 400; margin-left: 5px;">Male</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="genderFemale" name="gender" value="Female">
-                        <label for="genderFemale" style="font-weight: 400; margin-left: 5px;">Female</label>
-                    </div>
-                </div>
+    <label for="gender">Gender *</label>
+    <div class="row" style="grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div>
+            <input type="radio" id="genderMale" name="patient_gender" value="Male" required>
+            <label for="genderMale" style="font-weight: 400; margin-left: 5px;">Male</label>
+        </div>
+        <div>
+            <input type="radio" id="genderFemale" name="patient_gender" value="Female">
+            <label for="genderFemale" style="font-weight: 400; margin-left: 5px;">Female</label>
+        </div>
+    </div>
 
-                <label for="phone">Phone Number *</label>
-                <input id="phone" type="tel" placeholder="+8801XXXXXXXXX" required>
+    <label for="phone_number">Phone Number *</label>
+    <input id="phone_number" name="phone_number" type="tel" placeholder="+8801XXXXXXXXX" 
+           pattern="^\+?8801[3-9]\d{8}$" 
+           title="Please enter a valid Bangladeshi phone number" 
+           required>
 
-                <div class="row">
-                    <div>
-                        <label for="date">Date *</label>
-                        <input id="date" type="date" required>
-                    </div>
-                    <div>
-                        <label for="time">Time *</label>
-                        <input id="time" type="time" required>
-                    </div>
-                </div>
+    <div class="row">
+        <div>
+            <label for="appointment_date">Date *</label>
+            <input id="appointment_date" name="appointment_date" type="date" 
+                   min="<?php echo date('Y-m-d'); ?>" 
+                   required>
+        </div>
+        <div>
+            <label for="appointment_time">Time *</label>
+            <input id="appointment_time" name="appointment_time" type="time" 
+                   min="09:00" max="17:00" 
+                   required>
+        </div>
+    </div>
 
-                <label for="notes">Brief Problem Description</label>
-                <textarea id="notes" rows="3" placeholder="Describe your symptoms briefly"></textarea>
+    <label for="problem_description">Brief Problem Description</label>
+    <textarea id="problem_description" name="problem_description" rows="3" placeholder="Describe your symptoms briefly"></textarea>
 
-                <button type="submit">Book Appointment</button>
-            </form>
+    <button type="submit">Book Appointment</button>
+</form>
         </div>
     </section>
 
